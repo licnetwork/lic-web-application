@@ -36,9 +36,7 @@
             $mail->IsHTML(true);
 
             $mail->Subject = $subject;
-            $body = utf8_encode('
-              This user is asking for critical information, please assist:
-            ') + 'Name: ' + $name '<br />' + 'Email: ' + $email + '<br /><br />' + $message;
+            $body = utf8_encode('<h4>Blah blah blah</h4>');
             $mail->Body = $body;
             $mail->AltBody = $body;
             if(!$mail->Send())
